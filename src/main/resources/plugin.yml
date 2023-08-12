@@ -1,0 +1,5 @@
+name: CustomDrops
+version: '${project.version}'
+main: com.ashkiano.customdrops.CustomDrops
+api-version: '1.16'
+author: AshKiano

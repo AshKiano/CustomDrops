@@ -1,0 +1,26 @@
+# CustomDrops Configuration File
+# This file allows you to customize the drops for different mobs on your server.
+
+# To add a new mob:
+# 1. Find the official EntityType name of the mob from the Minecraft Wiki or Spigot API documentation.
+# 2. Add the EntityType name in all-uppercase, followed by a colon.
+# 3. Below the EntityType name, list the desired drops with their quantities.
+
+# For example, to make a chicken drop diamonds:
+# CHICKEN:
+#   DIAMOND: 1
+
+# In the example below, zombies will drop 1 diamond and 2 gold ingots:
+ZOMBIE:
+  DIAMOND: 1
+  GOLD_INGOT: 2
+
+# Creepers will drop 1 TNT block:
+CREEPER:
+  TNT: 1
+
+# You can continue adding as many mobs and drops as desired. 
+# Just make sure to use the correct material names for the items, 
+# and remember to respect the YAML format with correct indentation.
+
+# If you face any issues or have questions, refer to the plugin's documentation or support channels.

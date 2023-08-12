@@ -1,0 +1,5 @@
+name: CustomDrops
+version: '1.1'
+main: com.ashkiano.customdrops.CustomDrops
+api-version: '1.16'
+author: AshKiano
