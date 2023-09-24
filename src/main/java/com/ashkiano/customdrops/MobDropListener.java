@@ -20,18 +20,16 @@ public class MobDropListener implements Listener {
         LivingEntity entity = event.getEntity();
         ConfigurationSection mobDropSection = plugin.getConfig().getConfigurationSection(entity.getType().name());
 
-        if (mobDropSection == null) {
-            return;
-        }
+        if (mobDropSection != null) {
+            event.getDrops().clear();
 
-        event.getDrops().clear();
+            for (String key : mobDropSection.getKeys(false)) {
+                Material material = Material.matchMaterial(key);
+                int amount = mobDropSection.getInt(key, 1);
 
-        for (String key : mobDropSection.getKeys(false)) {
-            Material material = Material.matchMaterial(key);
-            int amount = mobDropSection.getInt(key, 1);
-
-            if (material != null) {
-                event.getDrops().add(new ItemStack(material, amount));
+                if (material != null) {
+                    event.getDrops().add(new ItemStack(material, amount));
+                }
             }
         }
     }

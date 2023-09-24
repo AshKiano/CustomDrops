@@ -6,7 +6,8 @@ public class CustomDrops extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        saveDefaultConfig();
+        this.saveDefaultConfig();
+        this.reloadConfig();
         getServer().getPluginManager().registerEvents(new MobDropListener(this), this);
 
         Metrics metrics = new Metrics(this, 19462);
